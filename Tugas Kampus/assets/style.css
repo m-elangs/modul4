@@ -1,0 +1,223 @@
+:root{
+  --main-color : #ffd95c;
+  --main-color-hover : #e6c34f;
+  --dark-color : #2b2b2b;
+  --container-width : 1100px;
+}
+
+*{
+  box-sizing: border-box;
+}
+h1{
+  padding: 0;
+  margin: 0;
+  font-size: 32px;
+}
+
+html, body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-container{
+  background-color: var(--dark-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-container header nav{
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  left: 0;
+}
+.nav-container header input#hamburger{
+  display: none;
+}
+.nav-container header input:checked~nav{
+  display: inline-block;
+}
+.nav-container header label{
+  font-size: 32px;
+  padding: 8px;
+  color: white;
+  font-style: normal;
+}
+.nav-container header{
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.nav-container .logo img{
+  width: 180px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.nav-container header nav ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-container header nav ul li{
+  height: 60px;
+  background-color: var(--dark-color);
+}
+.nav-container header nav ul li a{
+  height: 60px;
+  text-decoration: none;
+  color: white;
+  line-height: 60px;
+  text-transform: uppercase;
+  padding: 0 16px;
+  display: block;
+}
+.nav-container header nav ul li a:hover{
+  color: var(--main-color);
+  transition: all 0.3s;
+  border-bottom: 5px solid var(--main-color);
+}
+.hero-container{
+background-color: grey;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 70vh;
+}
+.hero.text h1{
+  text-align: center;
+}
+.hero.text p{
+font-size: 32px;
+margin: 0;
+color: var(--dark-color);
+}
+.button{
+  padding: 11.2px 19.2px;
+  background-color: var(--main-color);
+  text-decoration: none;
+  margin-top: 24px;
+  display: inline-block;
+  border-radius: 30px;
+  font-size: 17.6px;
+  
+}
+.button :hover{
+  background-color: var(--main-color-hover);
+  color: #2b2b2b;
+  transition: all 0.3s;
+}
+.showcase-container:nth-child(even){
+  background-color: #7e0414a8;
+}
+.showcase{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 32px;
+}
+.showcase-image, .showcase-text{
+  margin: 16px;
+  width: auto;
+}
+.showcase-image img{
+  width: 100%;
+  border: 1px solid silver;
+  padding: 4px;
+
+}
+.blog-container header{
+  padding: 0 32px;
+  text-align: center;
+}
+.blog-container header hr{
+  width: 25%;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+.blog-index{
+  display: flex;
+  margin-top: 16px;
+  padding: 0 2%;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.blog-index .snippet{
+  width: 100%;
+  margin: 16px 32px;
+  border-radius: 4px;
+  border: ipx solid #ddd;
+}
+.blog-index .snippet-txt{
+  padding: 0 16px;
+}
+.blog-index .snippet-txt small{
+  color: #999;
+}
+.blog-index .snippet img{
+  width: 100%
+}
+.footer-container{
+  margin-top: 3rem;
+  color: white;
+  background-color: var(--dark-color);
+  padding: 32px 16px;
+}
+.footer-container a{
+  text-decoration: none;
+  color: white;
+}
+.footer-container  .footer-menu section{
+  width: 50%;
+  color: white;
+}
+.footer-container .footer-menu{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: var(--container-width);
+  justify-content: space-between;
+}
+.footer-container .footer-menu ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-container .footer-copyright{
+  display: flex;
+  max-width: var(--container-width);
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.logo-container img{
+  width: 100px;
+}
+@media screen and (min-width: 768px){
+  .nav-container header nav{
+      position: unset;
+      display: block;
+  }
+  .nav-container nav ul{
+      display: flex;
+      justify-content: end;
+  }
+  
+  .nav-container header label{
+      display: none;
+  }
+  .showcase{
+      flex-direction: row;
+  }
+  .blog-index .snippet{
+      width: 32%;
+      margin: 0 0%;
+  }
+  .showcase-image, .showcase-text{
+      width: 100%;
+  }
+}
